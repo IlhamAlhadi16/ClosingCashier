@@ -201,11 +201,11 @@
                 <h3 class="card-title">Kos kiye alus te?</h3>
               </div>
               <div class="card-body">
-                <!-- <span class="input-group-text">Rp. 100.000</span> -->
+                <span class="input-group-text">Uang CashDrawer</span>
                 <div class="input-group mb-3">
                   <input type="text" class="form-control" placeholder="Pecahan 100.000" value="100000" id="pec100k" readonly>
                   &nbsp;<div style="margin-top: 1%;">x</div>&nbsp;
-                  <input type="text" class="form-control" placeholder="Pecahan 100.000" id="100k" onchange="jum100k()">
+                  <input type="text" class="form-control" placeholder="Jumlah Pecahan 100.000" id="100k" onchange="jum100k()">
                   &nbsp;<div style="margin-top: 1%;">=</div>&nbsp;
                   <input type="text" class="form-control" placeholder="Jumlah" id="jum100k" readonly>
                 </div>
@@ -214,7 +214,7 @@
                 <div class="input-group mb-3">
                   <input type="text" class="form-control" placeholder="Pecahan 50.000" value="50000" id="pec50k" readonly>
                   &nbsp;<div style="margin-top: 1%;">x</div>&nbsp;
-                  <input type="text" class="form-control" placeholder="Pecahan 50.000" id="50k" onchange="jum50k()">
+                  <input type="text" class="form-control" placeholder="Jumlah Pecahan 50.000" id="50k" onchange="jum50k()">
                   &nbsp;<div style="margin-top: 1%;">=</div>&nbsp;
                   <input type="text" class="form-control" placeholder="Jumlah" id="jum50k" readonly>
                 </div>
@@ -223,7 +223,7 @@
                 <div class="input-group mb-3">
                   <input type="text" class="form-control" placeholder="Pecahan 20.000" value="20000" id="pec20k" readonly>
                   &nbsp;<div style="margin-top: 1%;">x</div>&nbsp;
-                  <input type="text" class="form-control" placeholder="Pecahan 20.000" id="20k" onchange="jum20k()">
+                  <input type="text" class="form-control" placeholder="Jumlah Pecahan 20.000" id="20k" onchange="jum20k()">
                   &nbsp;<div style="margin-top: 1%;">=</div>&nbsp;
                   <input type="text" class="form-control" placeholder="Jumlah" id="jum20k" readonly>
                 </div>
@@ -232,7 +232,7 @@
                 <div class="input-group mb-3">
                   <input type="text" class="form-control" placeholder="Pecahan 10.000" value="10000" id="pec10k" readonly>
                   &nbsp;<div style="margin-top: 1%;">x</div>&nbsp;
-                  <input type="text" class="form-control" placeholder="Pecahan 10.000" id="10k" onchange="jum10k()">
+                  <input type="text" class="form-control" placeholder="Jumlah Pecahan 10.000" id="10k" onchange="jum10k()">
                   &nbsp;<div style="margin-top: 1%;">=</div>&nbsp;
                   <input type="text" class="form-control" placeholder="Jumlah" id="jum10k" readonly>
                 </div>
@@ -241,7 +241,7 @@
                 <div class="input-group mb-3">
                   <input type="text" class="form-control" placeholder="Pecahan 5.000" value="5000" id="pec5k" readonly>
                   &nbsp;<div style="margin-top: 1%;">x</div>&nbsp;
-                  <input type="text" class="form-control" placeholder="Pecahan 5.000" id="5k" onchange="jum5k()">
+                  <input type="text" class="form-control" placeholder="Jumlah Pecahan 5.000" id="5k" onchange="jum5k()">
                   &nbsp;<div style="margin-top: 1%;">=</div>&nbsp;
                   <input type="text" class="form-control" placeholder="Jumlah" id="jum5k" readonly>
                 </div>
@@ -250,7 +250,7 @@
                 <div class="input-group mb-3">
                   <input type="text" class="form-control" placeholder="Pecahan 2.000" value="2000" id="pec2k" readonly>
                   &nbsp;<div style="margin-top: 1%;">x</div>&nbsp;
-                  <input type="text" class="form-control" placeholder="Pecahan 2.000" id="2k" onchange="jum2k()">
+                  <input type="text" class="form-control" placeholder="Jumlah Pecahan 2.000" id="2k" onchange="jum2k()">
                   &nbsp;<div style="margin-top: 1%;">=</div>&nbsp;
                   <input type="text" class="form-control" placeholder="Jumlah" id="jum2k" readonly>
                 </div>
@@ -259,7 +259,7 @@
                 <div class="input-group mb-3">
                   <input type="text" class="form-control" placeholder="Pecahan 1.000" value="1000" id="pec1k" readonly>
                   &nbsp;<div style="margin-top: 1%;">x</div>&nbsp;
-                  <input type="text" class="form-control" placeholder="Pecahan 1.000" id="1k" onchange="jum1k()">
+                  <input type="text" class="form-control" placeholder="Jumlah Pecahan 1.000" id="1k" onchange="jum1k()">
                   &nbsp;<div style="margin-top: 1%;">=</div>&nbsp;
                   <input type="text" class="form-control" placeholder="Jumlah" id="jum1k" readonly>
                 </div>
@@ -268,7 +268,7 @@
                 <div class="input-group mb-3">
                   <input type="text" class="form-control" placeholder="Pecahan 500" value="500" id="pec500" readonly>
                   &nbsp;<div style="margin-top: 1%;">x</div>&nbsp;
-                  <input type="text" class="form-control" placeholder="Pecahan 500" id="500" onchange="jum500()">
+                  <input type="text" class="form-control" placeholder="Jumlah Pecahan 500" id="500" onchange="jum500()">
                   &nbsp;<div style="margin-top: 1%;">=</div>&nbsp;
                   <input type="text" class="form-control" placeholder="Jumlah" id="jum500" readonly>
                 </div>
@@ -277,7 +277,7 @@
                 <div class="input-group mb-3">
                   <input type="text" class="form-control" placeholder="Pecahan 200" value="200" id="pec200" readonly>
                   &nbsp;<div style="margin-top: 1%;">x</div>&nbsp;
-                  <input type="text" class="form-control" placeholder="Pecahan 200" id="200" onchange="jum200()">
+                  <input type="text" class="form-control" placeholder="Jumlah Pecahan 200" id="200" onchange="jum200()">
                   &nbsp;<div style="margin-top: 1%;">=</div>&nbsp;
                   <input type="text" class="form-control" placeholder="Jumlah" id="jum200" readonly>
                 </div>
@@ -286,7 +286,7 @@
                 <div class="input-group mb-3">
                   <input type="text" class="form-control" placeholder="Pecahan 100" value="100" id="pec100" readonly>
                   &nbsp;<div style="margin-top: 1%;">x</div>&nbsp;
-                  <input type="text" class="form-control" placeholder="Pecahan 100" id="100" onchange="jum100()">
+                  <input type="text" class="form-control" placeholder="Jumlah Pecahan 100" id="100" onchange="jum100()">
                   &nbsp;<div style="margin-top: 1%;">=</div>&nbsp;
                   <input type="text" class="form-control" placeholder="Jumlah" id="jum100" readonly>
                 </div>
@@ -295,16 +295,52 @@
                 <div class="input-group mb-3">
                   <input type="text" class="form-control" placeholder="Pecahan Lainnya" id="nominalpecahan">
                   &nbsp;<div style="margin-top: 1%;">x</div>&nbsp;
-                  <input type="text" class="form-control" placeholder="Pecahan Lainnya" id="adaberapa" onchange="jumlah()">
+                  <input type="text" class="form-control" placeholder="Jumlah Pecahan Lainnya" id="adaberapa" onchange="jumlah()">
                   &nbsp;<div style="margin-top: 1%;">=</div>&nbsp;
 									<input type="text" class="form-control" placeholder="Jumlah" id="jumpec" readonly>
 								</div>
 
 								<!-- <span class="input-group-text">Total</span> -->
                 <div class="input-group mb-3">
-									<label for="">Total : </label>
+									<label for="">Total 1: </label>
                   <input type="text" class="form-control" placeholder="Jumlah" id="total" readonly>
 								</div>
+
+								<span class="input-group-text">Retur Penjualan</span>
+								<div class="input-group mb-3">
+                  <input type="text" class="form-control" placeholder="Nomor Faktur">
+                  &nbsp;<div style="margin-top: 1%;">=</div>&nbsp;
+                  <input type="text" class="form-control" placeholder="Nilai">
+								</div>
+								<div class="input-group mb-3">
+                  <input type="text" class="form-control" placeholder="Nomor Faktur">
+                  &nbsp;<div style="margin-top: 1%;">=</div>&nbsp;
+                  <input type="text" class="form-control" placeholder="Nilai">
+								</div>
+								<div class="input-group mb-3">
+                  <input type="text" class="form-control" placeholder="Nomor Faktur">
+                  &nbsp;<div style="margin-top: 1%;">=</div>&nbsp;
+                  <input type="text" class="form-control" placeholder="Nilai">
+								</div>
+								<div class="input-group mb-3">
+                  <input type="text" class="form-control" placeholder="Nomor Faktur">
+                  &nbsp;<div style="margin-top: 1%;">=</div>&nbsp;
+                  <input type="text" class="form-control" placeholder="Nilai">
+								</div>
+								<div class="input-group mb-3">
+                  <input type="text" class="form-control" placeholder="Nomor Faktur">
+                  &nbsp;<div style="margin-top: 1%;">=</div>&nbsp;
+                  <input type="text" class="form-control" placeholder="Nilai">
+								</div>
+								<div class="input-group mb-3">
+									<label for="">Total 2: </label>
+                  <input type="text" class="form-control" placeholder="Jumlah" id="total" readonly>
+								</div>
+								<div class="input-group mb-3">
+									<label for="">Total 3: </label>
+                  <input type="text" class="form-control" placeholder="Jumlah" id="total" readonly>
+								</div>
+								
 
 								<div class="input-group mb-3">
                   <input type="submit" class="form-control" value="Save">
