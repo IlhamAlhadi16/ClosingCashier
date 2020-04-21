@@ -7,24 +7,24 @@ class Auth extends MY_Controller
 	{
 		parent::__construct();
 
-		// $this->load->model('UserModel');
+		$this->load->model('UserModel');
 	}
 
 	public function index()
 	{
-		if ($this->session->userdata('authenticated')){ // Jika user sudah login (Session authenticated ditemukan)
+		if ($this->session->userdata('authenticated')) // Jika user sudah login (Session authenticated ditemukan)
 			// redirect('home/index'); // Redirect ke page home
 			if ($this->session->userdata('role') == 'admin') {
-
+				redirect('kasir/general');
 			}else if ($this->session->userdata('role') == 'operator') {
-				
+				redirect('kasir/general');
 			}else if ($this->session->userdata('role') == 'kasir') {
 				redirect('kasir/general');
+			}else{
+				redirect('kasir/general');		
 			}
-		}else{
 			// function render_login tersebut dari file core/MY_Controller.php
 			$this->render_login('login'); //Load view login.php
-		}
 	}
 
 	public function login()
