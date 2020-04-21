@@ -1,21 +1,4 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>AdminLTE 3 | General Form Elements</title>
-  <!-- Tell the browser to be responsive to screen width -->
-  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <!-- Font Awesome -->
-	<link rel="stylesheet" href="<?= base_url(); ?>plugins/fontawesome-free/css/all.min.css">
-  <!-- Ionicons -->
-  <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
-  <!-- Theme style -->
-  <link rel="stylesheet" href="<?= base_url(); ?>dist/css/adminlte.min.css">
-  <!-- Google Font: Source Sans Pro -->
-  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
-</head>
 <body class="hold-transition sidebar-mini">
 <div class="wrapper">
   <!-- Navbar -->
@@ -177,7 +160,17 @@
                 <!-- <i class="right fas fa-angle-left"></i> -->
               </p>
             </a>
-            
+					</li>
+					
+					<li class="nav-item has-treeview">
+            <a href="#" class="nav-link active">
+              <i class="nav-icon fas fa-tachometer-alt"></i>
+              <p>
+                Dashboard
+                <!-- <i class="right fas fa-angle-left"></i> -->
+              </p>
+            </a>
+          </li>
         </ul>
       </nav>
       <!-- /.sidebar-menu -->
@@ -302,6 +295,10 @@
 
 								<!-- <span class="input-group-text">Total</span> -->
                 <div class="input-group mb-3">
+                  <!-- <input type="submit" class="form-control" value="Save"> -->
+                <input type="submit" class="form-control" value="Count" onclick="sum()">
+                </div>
+                <div class="input-group mb-3">
 									<label for="">Total 1: </label>
                   <input type="text" class="form-control" placeholder="Jumlah" id="total" readonly>
 								</div>
@@ -349,68 +346,88 @@
                   function jum100k() {
                     seratusrebu = document.getElementById('pec100k').value;
                     berapa100k = document.getElementById('100k').value;
-                    jumlah100k = seratusrebu * berapa100k;
+                    jumlah100k = parseInt(seratusrebu) * parseInt(berapa100k);
                     document.getElementById('jum100k').value = parseInt(jumlah100k);
                   }
                   function jum50k() {
                     seratusrebu = document.getElementById('pec50k').value;
                     berapa100k = document.getElementById('50k').value;
-                    jumlah100k = seratusrebu * berapa100k;
+                    jumlah100k = parseInt(seratusrebu) * parseInt(berapa100k);
                     document.getElementById('jum50k').value = parseInt(jumlah100k);
                   }
                   function jum20k() {
                     seratusrebu = document.getElementById('pec20k').value;
                     berapa100k = document.getElementById('20k').value;
-                    jumlah100k = seratusrebu * berapa100k;
+                    jumlah100k = parseInt(seratusrebu) * parseInt(berapa100k);
                     document.getElementById('jum20k').value = parseInt(jumlah100k);
                   }
                   function jum10k() {
                     seratusrebu = document.getElementById('pec10k').value;
                     berapa100k = document.getElementById('10k').value;
-                    jumlah100k = seratusrebu * berapa100k;
+                    jumlah100k = parseInt(seratusrebu) * parseInt(berapa100k);
                     document.getElementById('jum10k').value = parseInt(jumlah100k);
                   }
                   function jum5k() {
                     seratusrebu = document.getElementById('pec5k').value;
                     berapa100k = document.getElementById('5k').value;
-                    jumlah100k = seratusrebu * berapa100k;
+                    jumlah100k = parseInt(seratusrebu) * parseInt(berapa100k);
                     document.getElementById('jum5k').value = parseInt(jumlah100k);
                   }
                   function jum2k() {
                     seratusrebu = document.getElementById('pec2k').value;
                     berapa100k = document.getElementById('2k').value;
-                    jumlah100k = seratusrebu * berapa100k;
+                    jumlah100k = parseInt(seratusrebu) * parseInt(berapa100k);
                     document.getElementById('jum2k').value = parseInt(jumlah100k);
                   }
                   function jum1k() {
                     seratusrebu = document.getElementById('pec1k').value;
                     berapa100k = document.getElementById('1k').value;
-                    jumlah100k = seratusrebu * berapa100k;
+                    jumlah100k = parseInt(seratusrebu) * parseInt(berapa100k);
                     document.getElementById('jum1k').value = parseInt(jumlah100k);
                   }
                   function jum500() {
                     seratusrebu = document.getElementById('pec500').value;
                     berapa100k = document.getElementById('500').value;
-                    jumlah100k = seratusrebu * berapa100k;
+                    jumlah100k = parseInt(seratusrebu) * parseInt(berapa100k);
                     document.getElementById('jum500').value = parseInt(jumlah100k);
                   }
                   function jum200() {
                     seratusrebu = document.getElementById('pec200').value;
                     berapa100k = document.getElementById('200').value;
-                    jumlah100k = seratusrebu * berapa100k;
+                    jumlah100k = parseInt(seratusrebu) * parseInt(berapa100k);
                     document.getElementById('jum200').value = parseInt(jumlah100k);
                   }
                   function jum100() {
                     seratusrebu = document.getElementById('pec100').value;
                     berapa100k = document.getElementById('100').value;
-                    jumlah100k = seratusrebu * berapa100k;
+                    jumlah100k = parseInt(seratusrebu) * parseInt(berapa100k);
                     document.getElementById('jum100').value = parseInt(jumlah100k);
                   }
 									function jumlah() {
                     seratusrebu = document.getElementById('nominalpecahan').value;
                     berapa100k = document.getElementById('adaberapa').value;
-                    jumlah100k = seratusrebu * berapa100k;
+                    jumlah100k = parseInt(seratusrebu) * parseInt(berapa100k);
                     document.getElementById('jumpec').value = parseInt(jumlah100k);
+                  }
+                  function sum() {
+                    txt100k = document.getElementById('jum100k').value;
+                    txt50k = document.getElementById('jum50k').value;
+                    txt20k = document.getElementById('jum20k').value;
+                    txt10k = document.getElementById('jum10k').value;
+                    txt5k = document.getElementById('jum5k').value;
+                    txt2k = document.getElementById('jum2k').value;
+                    txt1k = document.getElementById('jum1k').value;
+                    txt500 = document.getElementById('jum500').value;
+                    txt200 = document.getElementById('jum200').value;
+                    txt100 = document.getElementById('jum100').value;
+                    txtlain = document.getElementById('jumpec').value;
+                    if (txtlain == "") {
+                      txtlain = 0;
+                    }
+                    result = parseInt(txt100k) + parseInt(txt50k) + parseInt(txt20k) + parseInt(txt10k) + parseInt(txt5k) + parseInt(txt2k) + parseInt(txt1k) + parseInt(txt500) + parseInt(txt200) + parseInt(txt100) + parseInt(txtlain); 
+                    if (!isNaN(result)) {
+                      document.getElementById('total').value = result;
+                    }
                   }
                 </script>
                 <!-- /input-group -->
@@ -443,21 +460,3 @@
   <!-- /.control-sidebar -->
 </div>
 <!-- ./wrapper -->
-
-<!-- jQuery -->
-<script src="../../plugins/jquery/jquery.min.js"></script>
-<!-- Bootstrap 4 -->
-<script src="../../plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
-<!-- bs-custom-file-input -->
-<script src="../../plugins/bs-custom-file-input/bs-custom-file-input.min.js"></script>
-<!-- AdminLTE App -->
-<script src="../../dist/js/adminlte.min.js"></script>
-<!-- AdminLTE for demo purposes -->
-<script src="../../dist/js/demo.js"></script>
-<script type="text/javascript">
-$(document).ready(function () {
-  bsCustomFileInput.init();
-});
-</script>
-</body>
-</html>
