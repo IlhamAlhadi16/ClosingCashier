@@ -12,11 +12,19 @@ class Auth extends MY_Controller
 
 	public function index()
 	{
-		if ($this->session->userdata('authenticated')) // Jika user sudah login (Session authenticated ditemukan)
-			redirect('home/index'); // Redirect ke page home
+		if ($this->session->userdata('authenticated')){ // Jika user sudah login (Session authenticated ditemukan)
+			// redirect('home/index'); // Redirect ke page home
+			if ($this->session->userdata('role') == 'admin') {
 
-		// function render_login tersebut dari file core/MY_Controller.php
-		$this->render_login('login'); //Load view login.php
+			}else if ($this->session->userdata('role') == 'operator') {
+				
+			}else if ($this->session->userdata('role') == 'kasir') {
+				redirect('kasir/general');
+			}
+		}else{
+			// function render_login tersebut dari file core/MY_Controller.php
+			$this->render_login('login'); //Load view login.php
+		}
 	}
 
 	public function login()
