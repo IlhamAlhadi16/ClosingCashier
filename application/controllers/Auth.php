@@ -12,7 +12,7 @@ class Auth extends MY_Controller
 
 	public function index()
 	{
-		if ($this->session->userdata('authenticated')) // Jika user sudah login (Session authenticated ditemukan)
+		if ($this->session->userdata('authenticated')){ // Jika user sudah login (Session authenticated ditemukan)
 			// redirect('home/index'); // Redirect ke page home
 			if ($this->session->userdata('role') == 'admin') {
 				redirect('kasir/general');
@@ -20,44 +20,40 @@ class Auth extends MY_Controller
 				redirect('kasir/general');
 			}else if ($this->session->userdata('role') == 'kasir') {
 				redirect('kasir/general');
-			}else{
-				redirect('kasir/general');		
 			}
 			// function render_login tersebut dari file core/MY_Controller.php
-			$this->render_login('login'); //Load view login.php
-	}
+			// $this->render_login('login'); //Load view login.php
+		}else{
+			$username = $this->input->post('username'); //Ambil dari inputan username pada form login
+			$password = $this->input->post('password'); //Ambil dari inputan password pada form login dan encrypt dengan md5
 
-	public function login()
-	{
-		$username = $this->input->post('username'); //Ambil dari inputan username pada form login
-		$password = $this->input->post('password'); //Ambil dari inputan password pada form login dan encrypt dengan md5
+			$user = $this->UserModel->get($username,$password); //Panggil methode get yang ada di UserModel.php
 
-		$user = $this->UserModel->get($username,$password); //Panggil methode get yang ada di UserModel.php
-
-		if (empty($user)) { //jika hasilnya kosong atau user tidak ditemukan
-			$this->session->set_flashdata('message', 'Username tidak ditemukan'); //Buat session flashdata
-			redirect('auth'); //Redirect ke halaman login
-		}else {
-			if ($password == $user->password) { //Jika password yang diinput sama dengan password di database
-				$session = array(
-					'authenticated' => true, //Buat session authenticated dengan value true
-					'username' => $user->username, //Buat session username
-					'nama' => $user->nama, //Buat session nama
-					'role' => $user->role //Buat session role
-				);
-
-				$this->session->set_userdata($session);// Buat session sesuai session
-				if ($this->session->userdata('role') == 'admin') {
-
-				}else if ($this->session->userdata('role') == 'operator') {
-					
-				}else if ($this->session->userdata('role') == 'kasir') {
-					redirect('kasir/general');
-				}
-				// redirect('kasir/general'); //Redirect ke halaman home
-			}else{
-				$this->session->set_flashdata('message', 'Password Salah');
+			if (empty($user)) { //jika hasilnya kosong atau user tidak ditemukan
+				$this->session->set_flashdata('message', 'Username tidak ditemukan'); //Buat session flashdata
 				redirect('auth'); //Redirect ke halaman login
+			}else {
+				if ($password == $user->password) { //Jika password yang diinput sama dengan password di database
+					$session = array(
+						'authenticated' => true, //Buat session authenticated dengan value true
+						'username' => $user->username, //Buat session username
+						'nama' => $user->nama, //Buat session nama
+						'role' => $user->role //Buat session role
+					);
+
+					$this->session->set_userdata($session);// Buat session sesuai session
+					if ($this->session->userdata('role') == 'admin') {
+
+					}else if ($this->session->userdata('role') == 'operator') {
+						
+					}else if ($this->session->userdata('role') == 'kasir') {
+						redirect('kasir/general');
+					}
+					// redirect('kasir/general'); //Redirect ke halaman home
+				}else{
+					$this->session->set_flashdata('message', 'Password Salah');
+					redirect('auth'); //Redirect ke halaman login
+				}
 			}
 		}
 	}
