@@ -2,9 +2,9 @@
 
 class UserModel extends CI_Model{
 
-	public function get($username,$password){
+	public function get($username){
 		$this->db->where('username', $username);
-		$this->db->where('password', $password);
+		// $this->db->where('password', $password);
 		$result = $this->db->get('login')->row();
 		// Sama kek SELECT * FROM user WHERE username = '$username'
 
