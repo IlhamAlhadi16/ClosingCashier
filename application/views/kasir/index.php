@@ -191,7 +191,7 @@
 					</li>
 					
 					<li class="nav-item has-treeview">
-            <a href="<?= base_url()?>Auth/logout" class="nav-link">
+            <a href="<?= base_url()?>index.php/auth/logout" class="nav-link">
               <p>
                 Log Out
                 <!-- <i class="right fas fa-angle-left"></i> -->
