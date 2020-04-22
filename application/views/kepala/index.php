@@ -16,6 +16,7 @@
   <!-- Google Font: Source Sans Pro -->
   <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
 </head>
+
 <body class="hold-transition sidebar-mini">
 <div class="wrapper">
   <!-- Navbar -->
@@ -210,7 +211,7 @@
                 <h3 class="card-title">Kos kiye alus te?</h3>
               </div>
               <div class="card-body">
-								<span>Ini Admin ea</span>
+                <span>Ini kepala Cabang ea</span>
                 <!-- /input-group -->
               </div>
               <!-- /.card-body -->

@@ -40,9 +40,11 @@ class Auth extends MY_Controller
 
 				$this->session->set_userdata($session);// Buat session sesuai session
 				if ($session['role'] == "admin") {
-					redirect('admin/index'); //Redirect ke halaman home
+					// redirect('admin/index'); //Redirect ke halaman home
+					$this->load->view('admin/index');
 				}else if ($session['role'] == "kepala") {
-					redirect('kepala/index'); //Redirect ke halaman home
+					// redirect('kepala/index'); //Redirect ke halaman home
+					$this->load->view('kepala/index');
 				}else if ($session['role'] == 'kasir') {
 					// redirect('kasir/index'); //Redirect ke halaman home
 					$this->load->view('kasir/index');
